@@ -1,0 +1,18 @@
+dn: ou=people,dc=halcyon,dc=local
+objectClass: organizationalUnit
+ou: people
+
+dn: cn=branch-note,ou=people,dc=halcyon,dc=local
+objectClass: organizationalRole
+cn: branch-note
+description: FLAG4_PLACEHOLDER
+
+dn: cn=svc-fileserver,ou=people,dc=halcyon,dc=local
+objectClass: organizationalRole
+cn: svc-fileserver
+description: FLAG5_PLACEHOLDER -- fileserver account ops / FILESERVER_PASSWORD_PLACEHOLDER
+
+dn: cn=legacy-vpn,ou=people,dc=halcyon,dc=local
+objectClass: organizationalRole
+cn: legacy-vpn
+description: decommissioned 2021, credentials below genuinely don't work anywhere -- vpn_svc / Tunnel-Legacy-04
