@@ -1,0 +1,24 @@
+# Explicit network-config for the NoCloud datasource. Matched by name,
+# not MAC -- see the single-host boxes' own network-config.yaml for
+# why. Verified against this host's actual enp0s2/enp0s3/enp0s4
+# naming before writing this (3 NICs: NAT, link to directory, link to
+# fileserver).
+version: 2
+ethernets:
+  nat:
+    match:
+      name: "enp0s2"
+    dhcp4: true
+    dhcp6: true
+  link-directory:
+    match:
+      name: "enp0s3"
+    dhcp4: false
+    addresses:
+      - 10.10.20.1/24
+  link-fileserver:
+    match:
+      name: "enp0s4"
+    dhcp4: false
+    addresses:
+      - 10.10.30.1/24
